@@ -21,7 +21,7 @@ public class King extends GamePiece implements IMoves{
     }
 
     @Override
-    public boolean isMoveValid(Move destinationMove) {
+    public boolean isMoveValid(Position destinationMove) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     

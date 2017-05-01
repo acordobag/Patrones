@@ -3,16 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Entities.Util.Base;
 
-import Entities.Position;
+package Entities;
 
 /**
- *
+ * 
  * @author Adrian Cordoba
  */
-public interface IMoves {
-    public abstract void movePosition();
+public class Player {
     
-    public abstract boolean isMoveValid(Position destinationMove);
 }

@@ -6,6 +6,7 @@
 
 package Entities.Util.Base;
 
+import Entities.Position;
 import enums.PieceColor;
 import enums.PieceStatus;
 
@@ -18,6 +19,7 @@ public class GamePiece {
     private PieceColor color;
     private String name;
     private PieceStatus status;
+    private Position actualPosition;
 
     public PieceColor getColor() {
         return color;

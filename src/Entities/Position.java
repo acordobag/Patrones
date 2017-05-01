@@ -10,13 +10,13 @@ package Entities;
  * 
  * @author Adrian Cordoba
  */
-public class Move {
+public class Position {
     
     private int XPosition;
     private int YPosition;
 
        
-    public Move(int x, int y){
+    public Position(int x, int y){
         this.XPosition = x;
         this.YPosition= y;
     }
