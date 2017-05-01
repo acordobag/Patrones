@@ -3,12 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package enums;
+
+package Entities;
 
 /**
- *
+ * 
  * @author Adrian Cordoba
  */
-public enum ChessPieces {
-    
+public class GameFactory {
+
 }
