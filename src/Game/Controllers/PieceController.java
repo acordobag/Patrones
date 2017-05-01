@@ -4,18 +4,12 @@
  * and open the template in the editor.
  */
 
-package Entities;
-
-import enums.PieceColor;
+package Game.Controllers;
 
 /**
  * 
  * @author Adrian Cordoba
  */
-public abstract class GamePiece {
-    private PieceColor color;
-    
-    public abstract void movePosition();
-    
-    public abstract boolean isMoveValid(Move destinationMove);
+public class PieceController {
+
 }

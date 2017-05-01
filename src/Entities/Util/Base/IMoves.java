@@ -3,13 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+package Entities.Util.Base;
 
-package Entities;
+import Entities.Move;
 
 /**
- * 
+ *
  * @author Adrian Cordoba
  */
-public class GameFactory {
-
+public interface IMoves {
+    public abstract void movePosition();
+    
+    public abstract boolean isMoveValid(Move destinationMove);
 }

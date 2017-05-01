@@ -6,11 +6,14 @@
 
 package Entities;
 
+import Entities.Util.Base.IMoves;
+import Entities.Util.Base.GamePiece;
+
 /**
  * 
  * @author Adrian Cordoba
  */
-public class King extends GamePiece{
+public class King extends GamePiece implements IMoves{
 
     @Override
     public void movePosition() {

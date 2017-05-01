@@ -4,8 +4,10 @@
  * and open the template in the editor.
  */
 
-package Entities;
+package Entities.Util.Factories;
 
+import Entities.King;
+import Entities.Util.Base.GamePiece;
 import enums.GamePieces;
 
 /**
