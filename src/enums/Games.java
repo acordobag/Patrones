@@ -10,5 +10,5 @@ package enums;
  * @author Adrian Cordoba
  */
 public enum Games {
-    
+    CHESS
 }

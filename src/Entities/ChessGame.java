@@ -13,5 +13,9 @@ import Entities.Util.Base.TableGame;
  * @author Adrian Cordoba
  */
 public class ChessGame extends TableGame{
+    
+    public ChessGame(){
+        super("Chess", 8, 8);
+    }
 
 }

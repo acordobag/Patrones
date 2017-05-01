@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package Entities.Util.Base;
+package Entities;
 
 /**
  * 
@@ -13,6 +13,11 @@ package Entities.Util.Base;
 public class GameBoard {
     private int columns;
     private int rows;
+
+    public GameBoard(int columns, int rows) {
+        this.columns = columns;
+        this.rows = rows;
+    }
 
     public int getColumns() {
         return columns;
