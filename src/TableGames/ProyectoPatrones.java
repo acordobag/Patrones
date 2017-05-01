@@ -3,7 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package proyectopatrones;
+package TableGames;
+
+import Game.Controllers.PlayerController;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 /**
  *
@@ -14,8 +19,29 @@ public class ProyectoPatrones {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
-        // TODO code application logic here
+    public static void main(String[] args) throws IOException {
+        System.out.println("TableGames 1.0");
+        PlayerController mainController = new PlayerController();
+        int option = 0;
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        while (option !=3){
+            System.out.println("Select action:");
+            System.out.println("1. Create Player");
+            System.out.print("Enter String");
+            option = Integer.parseInt(br.readLine());
+            if (option == 1){
+                System.out.print("Escriba el nombre del Javamon (y presione ENTER)? ");
+                String username = br.readLine();
+                System.out.print("Escriba el nombre del Javamon (y presione ENTER)? ");
+                String mail = br.readLine();
+                System.out.print("Escriba el nombre del Javamon (y presione ENTER)? ");
+                String password = br.readLine();
+                
+               
+            }
+            
+        }
+
     }
     
 }
