@@ -6,8 +6,10 @@
 package Game.Controllers;
 
 import Entities.Player;
+import java.io.BufferedWriter;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.util.Properties;
@@ -20,30 +22,57 @@ import java.util.Properties;
  */
 public class PlayerController {
     
-    Player player;
-    Properties prop = new Properties();
-    OutputStream output;
+    public void createPlayer(String pUsername, String pEmail, String pPassword) throws IOException{
+      Player player = new Player(pUsername,pEmail,pPassword);
 
-    public void createPlayer(String pusername,String pmail,String ppassword) throws FileNotFoundException, IOException{
-        player =  new Player(pusername,pmail,ppassword);
-        createFile();
-    }
+      try {
+                FileWriter writer = new FileWriter("Players.txt", true);
+                BufferedWriter bufferedWriter = new BufferedWriter(writer);
 
-    private void createFile() throws FileNotFoundException, IOException {
-       try{ 
-        output = new FileOutputStream("config.properties");
-        setFileProperties();
-       }catch(IOException ex){
-         ex.printStackTrace();
-       } 
-    }
+                bufferedWriter.write("User: " + player.getUsername());;;
+                bufferedWriter.newLine();
+                bufferedWriter.write("Mail: " + player.getMail());
+                bufferedWriter.newLine();
+                bufferedWriter.write("Password: " + player.getPassword());
+                bufferedWriter.newLine();
 
-    private void setFileProperties() throws IOException {
-        prop.setProperty("user", player.getUsername());
-        prop.setProperty("mail", player.getMail());
-        prop.setProperty("password", player.getPassword());
-        prop.store(output, null);
-    }
+                bufferedWriter.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+                BufferedWriter out = new BufferedWriter(new FileWriter("Players.txt"));
+                createPlayer(pUsername, pEmail, pPassword);
+            }
+
+     }
+    
+    public void setFilePath() throws IOException{
+        
+        Properties prop = new Properties();
+        OutputStream output  = null;
+
+        try {
+         output  = new FileOutputStream("filesDirections.properties");
+
+         // set the properties value
+         prop.setProperty("Players file", "workspace" + "\\" + "proPatrones.");
+
+         // save properties to project root folder
+         prop.store(output , null);
+
+        } catch (IOException io) {
+         io.printStackTrace();
+        } finally {
+            if (output  != null) {
+               try {
+                output.close();
+               } catch (IOException e) {
+                e.printStackTrace();
+               }
+           }
+        }
+    }   
+
+    
 
     
 

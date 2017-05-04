@@ -12,42 +12,50 @@ package Entities;
  */
 public class Player {
     
+    private int id;
     private String username;
     private String  mail;
     private String password;
 
-    public Player(String username, String mail, String password) {
-        this.username = username;
-        this.mail = mail;
-        this.password = password;
+    public Player(String pusername, String pmail, String ppassword) {
+        setId();
+        setUsername(pusername);
+        setMail(pmail);
+        setPassword(ppassword);
+    }
+    
+    public int getId() {
+        return id;
     }
 
-    public Player() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void setId() {
+        
+        this.id++;
     }
 
+    
     public String getUsername() {
         return username;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setUsername(String pusername) {
+        this.username = pusername;
     }
 
     public String getMail() {
         return mail;
     }
 
-    public void setMail(String mail) {
-        this.mail = mail;
+    public void setMail(String pmail) {
+        this.mail = pmail;
     }
 
     public String getPassword() {
         return password;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setPassword(String ppassword) {
+        this.password = ppassword;
     }
 
     @Override

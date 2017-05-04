@@ -21,7 +21,9 @@ public class ProyectoPatrones {
      */
     public static void main(String[] args) throws IOException {
         System.out.println("TableGames 1.0");
-        PlayerController mainController = new PlayerController();
+        
+        PlayerController playerController = new PlayerController();
+        playerController.setFilePath();
         int option = 0;
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         while (option !=3){
@@ -30,14 +32,19 @@ public class ProyectoPatrones {
             System.out.print("Enter String");
             option = Integer.parseInt(br.readLine());
             if (option == 1){
-                System.out.print("Escriba el nombre del Javamon (y presione ENTER)? ");
+                System.out.print("Escriba el nombre de usuario del Jugador (y presione ENTER)? ");
                 String username = br.readLine();
-                System.out.print("Escriba el nombre del Javamon (y presione ENTER)? ");
+                System.out.print("Escriba el corre del Jugador (y presione ENTER)? ");
                 String mail = br.readLine();
-                System.out.print("Escriba el nombre del Javamon (y presione ENTER)? ");
+                System.out.print("Escriba la contraseña del Jugador (y presione ENTER)? ");
                 String password = br.readLine();
                 
-               
+                playerController.createPlayer(username, mail, password);
+                      
+            }else if(option == 3){
+            
+                option=3;
+            
             }
             
         }

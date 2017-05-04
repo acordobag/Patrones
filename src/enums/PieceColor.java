@@ -10,5 +10,7 @@ package enums;
  * @author Adrian Cordoba
  */
 public enum PieceColor {
+    black,
+    white;
     
 }
